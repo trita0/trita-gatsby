@@ -14,18 +14,18 @@ export default function ImpactMetricsSection() {
     <section className="mt-14">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h2 className="text-2xl font-semibold text-ink-950">Impact Metrics</h2>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-950/70">
+          <h2 className="font-heading text-3xl font-bold text-ink-950">Impact Metrics</h2>
+          <p className="mt-3 max-w-2xl font-body text-base leading-relaxed text-ink-950/70">
             Placeholder metrics for now—swap with real numbers as you gather more data.
           </p>
         </div>
       </div>
 
-      <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {metrics.map(m => (
-          <Card key={m.label}>
-            <div className="text-2xl font-semibold text-ink-950">{m.value}</div>
-            <div className="mt-1 text-sm text-ink-950/70">{m.label}</div>
+          <Card key={m.label} className="transition hover:shadow-lift">
+            <div className="font-display text-4xl font-bold text-ink-950">{m.value}</div>
+            <div className="mt-2 font-caption text-sm font-semibold text-ink-950/70 uppercase tracking-wider">{m.label}</div>
           </Card>
         ))}
       </div>

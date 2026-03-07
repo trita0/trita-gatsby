@@ -38,8 +38,13 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: [`ui-sans-serif`, `system-ui`, `-apple-system`, `Segoe UI`, `Roboto`, `Inter`, `Helvetica`, `Arial`, `sans-serif`],
-        serif: [`ui-serif`, `Georgia`, `Cambria`, `Times New Roman`, `Times`, `serif`],
+        display: [`var(--font-display)`, `serif`],
+        ui: [`var(--font-ui)`, `cursive`],
+        body: [`var(--font-body)`, `serif`],
+        heading: [`var(--font-heading)`, `serif`],
+        caption: [`var(--font-caption)`, `serif`],
+        sans: [`var(--font-ui)`, `ui-sans-serif`, `system-ui`, `-apple-system`, `Segoe UI`, `Roboto`, `Inter`, `Helvetica`, `Arial`, `sans-serif`],
+        serif: [`var(--font-body)`, `ui-serif`, `Georgia`, `Cambria`, `Times New Roman`, `Times`, `serif`],
       },
       boxShadow: {
         soft: `0 12px 28px rgba(7, 6, 10, 0.10)`,

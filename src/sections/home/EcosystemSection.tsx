@@ -26,8 +26,8 @@ export default function EcosystemSection() {
     <section className="mt-14">
       <div className="flex items-end justify-between gap-6">
         <div>
-          <h2 className="text-2xl font-semibold text-ink-950">Our Ecosystem</h2>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-950/70">
+          <h2 className="font-heading text-3xl font-bold text-ink-950">Our Ecosystem</h2>
+          <p className="mt-3 max-w-2xl font-body text-base leading-relaxed text-ink-950/70">
             A family of brands and programs built to make culture accessible, joyful, and relevant.
           </p>
         </div>
@@ -38,15 +38,15 @@ export default function EcosystemSection() {
         </div>
       </div>
 
-      <div className="mt-6 grid gap-5 md:grid-cols-3">
+      <div className="mt-8 grid gap-6 md:grid-cols-3">
         {items.map(item => (
-          <Card key={item.title} className="group">
-            <div className="text-lg font-semibold text-ink-950 group-hover:text-marigold-600 transition">
+          <Card key={item.title} className="group transition hover:shadow-lift">
+            <div className="font-ui text-xl font-bold text-ink-950 transition group-hover:text-marigold-600">
               {item.title}
             </div>
-            <p className="mt-2 text-sm text-ink-950/70">{item.desc}</p>
-            <div className="mt-5">
-              <Button to={item.to} variant="ghost" className="px-0 shadow-none">
+            <p className="mt-3 font-caption text-sm leading-relaxed text-ink-950/70">{item.desc}</p>
+            <div className="mt-6">
+              <Button to={item.to} variant="ghost" className="px-0 font-ui text-sm font-bold shadow-none">
                 Learn more
               </Button>
             </div>

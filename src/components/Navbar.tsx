@@ -19,7 +19,7 @@ export default function Navbar({ siteTitle }: NavbarProps) {
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-white/70 shadow-soft ring-1 ring-ink-950/10 transition group-hover:shadow-lift">
               <Logo className="h-8 w-8" />
             </span>
-            <span className="text-sm font-semibold tracking-wide text-ink-950">
+            <span className="font-display text-lg font-bold tracking-tight text-ink-950">
               {siteTitle}
             </span>
           </Link>
@@ -30,7 +30,7 @@ export default function Navbar({ siteTitle }: NavbarProps) {
             <Link
               key={item.to}
               to={item.to}
-              className="group relative text-sm text-ink-950/70 no-underline transition hover:text-ink-950 hover:no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-marigold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50"
+              className="group relative font-ui text-sm font-semibold text-ink-950/70 no-underline transition hover:text-ink-950 hover:no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-marigold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50"
               activeClassName="active text-ink-950"
             >
               <span className="relative">
@@ -43,7 +43,7 @@ export default function Navbar({ siteTitle }: NavbarProps) {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-xl border border-ink-950/10 bg-white/60 px-3 py-2 text-sm text-ink-950 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-marigold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50 md:hidden"
+          className="inline-flex items-center justify-center rounded-xl border border-ink-950/10 bg-white/60 px-3 py-2 font-ui text-sm font-semibold text-ink-950 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-marigold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50 md:hidden"
           aria-expanded={isOpen}
           aria-controls="mobile-nav"
           onClick={() => setIsOpen(v => !v)}
@@ -62,7 +62,7 @@ export default function Navbar({ siteTitle }: NavbarProps) {
               <Link
                 key={item.to}
                 to={item.to}
-                className="rounded-xl px-3 py-2 text-sm text-ink-950/80 hover:bg-ink-950/5 hover:text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-marigold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50"
+                className="rounded-xl px-3 py-2 font-ui text-sm font-semibold text-ink-950/80 hover:bg-ink-950/5 hover:text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-marigold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50"
                 activeClassName="bg-ink-950/5 text-ink-950"
                 onClick={() => setIsOpen(false)}
               >

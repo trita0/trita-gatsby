@@ -5,8 +5,8 @@ import Seo from "../components/Seo"
 
 const NotFoundPage = () => (
   <SiteLayout>
-    <h1 className="text-3xl font-semibold text-ink-950">404: Not Found</h1>
-    <p className="mt-3 text-sm text-ink-950/70">You just hit a route that doesn’t exist.</p>
+    <h1 className="font-display text-4xl font-bold tracking-tight text-ink-950">404: Not Found</h1>
+    <p className="mt-4 font-body text-lg leading-relaxed text-ink-950/70">You just hit a route that doesn’t exist.</p>
   </SiteLayout>
 )
 

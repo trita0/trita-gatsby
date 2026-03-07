@@ -9,13 +9,13 @@ export default function HeroSection() {
       <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-indigo-600/20 blur-3xl" />
 
       <div className="relative">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-ink-950/70">
+        <p className="font-display text-sm font-semibold uppercase tracking-[0.24em] text-ink-950/70">
           Trita
         </p>
-        <h1 className="mt-4 max-w-3xl text-balance text-3xl font-semibold leading-tight text-ink-950 sm:text-5xl">
+        <h1 className="mt-4 max-w-3xl text-balance font-display text-4xl font-bold leading-tight text-ink-950 sm:text-6xl">
           Reimagining Indian Culture Through Play, Learning, and Technology
         </h1>
-        <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-ink-950/70 sm:text-lg">
+        <p className="mt-6 max-w-2xl text-pretty font-body text-base leading-relaxed text-ink-950/70 sm:text-xl">
           We design experiences that revive traditional games, create cultural learning programs, and build digital
           platforms that bring families, schools, and communities together.
         </p>
@@ -27,18 +27,18 @@ export default function HeroSection() {
           </Button>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-3">
-          <div className="rounded-2xl border border-ink-950/10 bg-sand-50 px-5 py-4">
-            <div className="text-sm font-semibold text-ink-950">Play-led learning</div>
-            <div className="mt-1 text-xs text-ink-950/60">Games as a cultural bridge</div>
+        <div className="mt-12 grid gap-4 sm:grid-cols-3">
+          <div className="rounded-2xl border border-ink-950/10 bg-sand-50 px-5 py-4 transition hover:shadow-soft">
+            <div className="font-heading text-base font-semibold text-ink-950">Play-led learning</div>
+            <div className="mt-1 font-caption text-sm text-ink-950/60">Games as a cultural bridge</div>
           </div>
-          <div className="rounded-2xl border border-ink-950/10 bg-sand-50 px-5 py-4">
-            <div className="text-sm font-semibold text-ink-950">Research to design</div>
-            <div className="mt-1 text-xs text-ink-950/60">Grounded in lived heritage</div>
+          <div className="rounded-2xl border border-ink-950/10 bg-sand-50 px-5 py-4 transition hover:shadow-soft">
+            <div className="font-heading text-base font-semibold text-ink-950">Research to design</div>
+            <div className="mt-1 font-caption text-sm text-ink-950/60">Grounded in lived heritage</div>
           </div>
-          <div className="rounded-2xl border border-ink-950/10 bg-sand-50 px-5 py-4">
-            <div className="text-sm font-semibold text-ink-950">Technology with soul</div>
-            <div className="mt-1 text-xs text-ink-950/60">Digital preservation & platforms</div>
+          <div className="rounded-2xl border border-ink-950/10 bg-sand-50 px-5 py-4 transition hover:shadow-soft">
+            <div className="font-heading text-base font-semibold text-ink-950">Technology with soul</div>
+            <div className="mt-1 font-caption text-sm text-ink-950/60">Digital preservation & platforms</div>
           </div>
         </div>
       </div>

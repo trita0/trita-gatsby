@@ -13,8 +13,8 @@ const IndexPage = () => {
     <SiteLayout>
       <HeroSection />
       <section className="mt-14">
-        <h2 className="text-2xl font-semibold text-ink-950">About Trita</h2>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-950/70">
+        <h2 className="font-heading text-3xl font-bold text-ink-950">About Trita</h2>
+        <p className="mt-3 max-w-2xl font-body text-lg leading-relaxed text-ink-950/70">
           Trita is a culture-and-play studio building games, programs, and digital experiences rooted in Indian
           knowledge systems.
         </p>
@@ -23,8 +23,8 @@ const IndexPage = () => {
       <WhatWeDoSection />
       <ImpactMetricsSection />
       <section className="mt-14">
-        <h2 className="text-2xl font-semibold text-ink-950">Featured Work</h2>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-950/70">
+        <h2 className="font-heading text-3xl font-bold text-ink-950">Featured Work</h2>
+        <p className="mt-3 max-w-2xl font-body text-lg leading-relaxed text-ink-950/70">
           Placeholder: experiential game installations, events, programs, and media mentions.
         </p>
       </section>

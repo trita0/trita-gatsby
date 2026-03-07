@@ -36,30 +36,31 @@ const brands = [
 export default function BrandsPage() {
   return (
     <SiteLayout>
-      <header className="space-y-3">
-        <h1 className="text-3xl font-semibold text-ink-950">Our Brands</h1>
-        <p className="max-w-2xl text-sm leading-relaxed text-ink-950/70">
+      <header className="space-y-4">
+        <h1 className="font-display text-4xl font-bold tracking-tight text-ink-950">Our Brands</h1>
+        <p className="max-w-2xl font-body text-lg leading-relaxed text-ink-950/70">
           Explore Trita's ecosystem of brands and programs.
         </p>
       </header>
 
-      <section className="mt-10 grid gap-5 md:grid-cols-2">
+      <section className="mt-12 grid gap-6 md:grid-cols-2">
         {brands.map(b => (
-          <Card key={b.to} className="group">
-            <div className="mt-4 flex items-center gap-3">
+          <Card key={b.to} className="group transition hover:shadow-lift">
+            <div className="mt-4 flex items-center gap-4">
               <img
                 src={`/${b.image}`}
                 alt={`${b.title} logo`}
-                className="h-12 w-auto max-w-20 object-contain"
+                className="h-16 w-auto max-w-24 object-contain"
               />
-              <div className="text-lg font-semibold text-ink-950 group-hover:text-marigold-600 transition">
+              <div className="font-ui text-xl font-bold text-ink-950 group-hover:text-marigold-600 transition">
                 {b.title}
               </div>
             </div>
-            <p className="mt-2 text-sm text-ink-950/70">{b.desc}</p>
-            <div className="mt-4">
-              <Link to={b.to} className="text-sm font-semibold text-marigold-500 hover:text-marigold-600">
+            <p className="mt-3 font-caption text-sm leading-relaxed text-ink-950/70">{b.desc}</p>
+            <div className="mt-6">
+              <Link to={b.to} className="font-ui text-sm font-bold text-marigold-500 hover:text-marigold-600 flex items-center gap-1 transition">
                 View details
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="transition group-hover:translate-x-1"><path d="m9 18 6-6-6-6"/></svg>
               </Link>
             </div>
           </Card>

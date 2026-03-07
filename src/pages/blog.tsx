@@ -7,17 +7,17 @@ import Card from "../components/ui/Card"
 export default function BlogIndexPage() {
   return (
     <SiteLayout>
-      <header className="space-y-3">
-        <h1 className="text-3xl font-semibold text-ink-950">Blog / Insights</h1>
-        <p className="max-w-2xl text-sm leading-relaxed text-ink-950/70">
+      <header className="space-y-4">
+        <h1 className="font-display text-4xl font-bold tracking-tight text-ink-950">Blog / Insights</h1>
+        <p className="max-w-2xl font-body text-lg leading-relaxed text-ink-950/70">
           Stories behind Indian games, culture and play, parenting, strategy, and festival traditions.
         </p>
       </header>
 
-      <section className="mt-10 grid gap-5 md:grid-cols-2">
-        <Card>
-          <div className="text-base font-semibold text-ink-950">Sample post</div>
-          <p className="mt-2 text-sm text-ink-950/70">
+      <section className="mt-12 grid gap-6 md:grid-cols-2">
+        <Card className="transition hover:shadow-lift">
+          <div className="font-heading text-lg font-bold text-ink-950">Sample post</div>
+          <p className="mt-2 font-caption text-sm leading-relaxed text-ink-950/70">
             MDX templates + pagination will be enabled next. A sample MDX file is already in `src/content/blog`.
           </p>
         </Card>
