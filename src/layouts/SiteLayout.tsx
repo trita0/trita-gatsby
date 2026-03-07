@@ -24,7 +24,7 @@ export default function SiteLayout({ children }: SiteLayoutProps) {
   return (
     <div className="min-h-screen bg-sand-50 text-ink-950">
       <Navbar siteTitle={siteTitle} />
-      <main className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6">{children}</main>
+      <main className="mx-auto w-full max-w-6xl px-4 pt-32 pb-10 sm:px-6">{children}</main>
       <Footer />
     </div>
   )
