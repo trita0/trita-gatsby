@@ -28,12 +28,12 @@ export default function HeroSection() {
 
         <div className="flex flex-col justify-between gap-10 p-8 sm:p-12">
 
-          <div className="flex items-center gap-3">
+          {/* <div className="flex items-center gap-3">
             <img src="/trita-logo.png" alt="Trita logo" className="h-10 w-auto" />
             <span className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-ink-950/50">
               Trita
             </span>
-          </div>
+          </div> */}
 
           <div className="space-y-5">
             <h1 className="max-w-2xl text-balance font-display text-4xl font-bold leading-[1.1] tracking-tight text-ink-950 sm:text-5xl lg:text-6xl">
