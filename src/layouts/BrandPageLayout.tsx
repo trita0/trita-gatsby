@@ -27,7 +27,7 @@ export default function BrandPageLayout({
       <Seo title={title} pathname={`/brands/${title.toLowerCase().replace(/\s/g, "-")}`} />
       <header className="space-y-6">
         <div>
-          <Link to="/brands" className="group flex items-center gap-2">
+          <Link to="/brands" className="group flex w-fit items-center gap-2 transition-all active:opacity-70">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -42,7 +42,7 @@ export default function BrandPageLayout({
             >
               <path d="m12 19-7-7 7-7" />
             </svg>
-            <span className="font-ui text-sm font-semibold text-ink-950/70 transition group-hover:text-ink-950">
+            <span className="font-ui text-sm font-semibold text-ink-950/70 transition-all group-hover:text-ink-950">
               {subtitle}
             </span>
           </Link>

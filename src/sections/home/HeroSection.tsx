@@ -21,8 +21,8 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden rounded-3xl border border-ink-950/10 bg-white shadow-soft">
 
-      <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-marigold-500/20 blur-3xl" />
-      <div className="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-indigo-600/15 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-marigold-500/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-indigo-600/15 blur-3xl" />
 
       <div className="relative grid gap-0 lg:grid-cols-[1fr_auto]">
 
@@ -59,7 +59,7 @@ export default function HeroSection() {
           {pillars.map((p, i) => (
             <div
               key={p.title}
-              className={`group flex flex-col gap-1 px-8 py-6 transition hover:bg-sand-50 ${
+              className={`group flex flex-col gap-1 px-8 py-6 transition-all duration-200 lg:hover:bg-sand-50 ${
                 i !== pillars.length - 1 ? "border-b border-ink-950/8" : ""
               }`}
             >

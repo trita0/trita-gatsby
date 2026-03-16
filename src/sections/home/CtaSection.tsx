@@ -9,8 +9,8 @@ export default function CtaSection() {
     <section className="mt-14">
       <div className="relative overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-soft">
         
-        <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-marigold-500/20 blur-3xl" />
-        <div className="absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-indigo-600/15 blur-3xl" />
+        <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-marigold-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-indigo-600/15 blur-3xl" />
 
         <div className="relative grid gap-0 lg:grid-cols-[1fr_auto]">
 

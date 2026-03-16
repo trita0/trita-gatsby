@@ -149,7 +149,7 @@ function ProductCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-soft transition-shadow duration-300 hover:shadow-md no-underline"
+      className="group flex flex-col overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-soft transition-all duration-300 active:scale-[0.98] lg:hover:shadow-md no-underline"
     >
       {/* Image zone — swap on hover */}
       <div
@@ -159,13 +159,13 @@ function ProductCard({
         <img
           src={img1}
           alt={name}
-          className="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+          className="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-500 ease-in-out lg:group-hover:opacity-0"
         />
         {img2 && (
           <img
             src={img2}
             alt={`${name} alternate view`}
-            className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
+            className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 ease-in-out lg:group-hover:opacity-100"
           />
         )}
       </div>
@@ -216,7 +216,7 @@ export default function ProductsPage() {
           <button
             key={s.id}
             onClick={() => scrollTo(s.id)}
-            className="rounded-2xl border border-ink-950/[0.08] bg-white px-4 py-2 font-ui text-sm font-semibold text-ink-950/60 shadow-soft transition hover:bg-sand-50 hover:text-ink-950"
+            className="rounded-2xl border border-ink-950/[0.08] bg-white px-4 py-2 font-ui text-sm font-semibold text-ink-950/60 shadow-soft transition-all active:bg-sand-50 active:text-ink-950 lg:hover:bg-sand-50 lg:hover:text-ink-950"
           >
             {s.label}
           </button>
@@ -316,7 +316,7 @@ export default function ProductsPage() {
               href={c.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group flex items-center justify-between px-7 py-5 transition hover:bg-sand-50 no-underline
+              className={`group flex items-center justify-between px-7 py-5 transition-all duration-200 active:bg-sand-100 lg:hover:bg-sand-50 no-underline
                 ${i % 3 !== 2 ? "lg:border-r border-ink-950/[0.08]" : ""}
                 ${i < 3 ? "lg:border-b border-ink-950/[0.08]" : ""}
                 ${

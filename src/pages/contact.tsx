@@ -177,7 +177,7 @@ export default function ContactPage() {
               <div className="mt-2">
                 <a
                   href="mailto: namaste@trita.in"
-                  className="font-ui text-sm font-semibold text-ink-950/70 no-underline transition hover:text-ink-950"
+                  className="font-ui text-sm font-semibold text-ink-950/70 no-underline transition-all duration-200 active:text-ink-950 lg:hover:text-ink-950"
                 >
                    namaste@trita.in
                 </a>
@@ -187,8 +187,8 @@ export default function ContactPage() {
               <span className="font-ui text-xs font-medium uppercase tracking-widest text-ink-950/25">Phone</span>
               <div className="mt-2">
                 <a
-                  href="tel:+910000000000"
-                  className="font-ui text-sm font-semibold text-ink-950/70 no-underline transition hover:text-ink-950"
+                  href="tel:+919342184698"
+                  className="font-ui text-sm font-semibold text-ink-950/70 no-underline transition-all duration-200 active:text-ink-950 lg:hover:text-ink-950"
                 >
                   +91 93421 84698
                 </a>

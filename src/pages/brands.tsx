@@ -66,7 +66,7 @@ export default function BrandsPage() {
         {brands.map((b) => (
           <div
             key={b.to}
-            className="group flex flex-col overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-soft transition-shadow duration-300 hover:shadow-md"
+            className="group flex flex-col overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-soft transition-all duration-300 active:scale-[0.99] lg:hover:shadow-md"
           >
             {/* Number + tag */}
             <div className="flex items-center justify-between px-6 pt-5">
@@ -108,14 +108,9 @@ export default function BrandsPage() {
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-2">
-                <a
-                  href={b.ctaHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-500 px-5 py-2.5 font-ui text-sm font-semibold text-ink-950 no-underline shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift"
-                >
+                <Button href={b.ctaHref} target="_blank" rel="noopener noreferrer">
                   {b.cta}
-                </a>
+                </Button>
                 <Button to={b.to} variant="secondary" className="px-5 py-2.5 text-sm">
                   Learn more
                 </Button>

@@ -1,9 +1,5 @@
+import type { GatsbyFunctionRequest, GatsbyFunctionResponse } from "gatsby"
 import { XMLParser } from "fast-xml-parser"
-
-interface Env {
-  RESEND_API_KEY: string
-  RESEND_TO_EMAIL: string
-}
 
 function stripHtml(html: string): string {
   return html
@@ -33,7 +29,10 @@ async function fetchOgImage(url: string): Promise<string | null> {
   }
 }
 
-export async function onRequest(context: { env: Env }): Promise<Response> {
+export default async function handler(
+  _req: GatsbyFunctionRequest,
+  res: GatsbyFunctionResponse
+) {
   try {
     const feedRes = await fetch("https://rollthedice.in/blogs/talk.atom", {
       headers: {
@@ -43,10 +42,8 @@ export async function onRequest(context: { env: Env }): Promise<Response> {
     })
 
     if (!feedRes.ok) {
-      return new Response(JSON.stringify({ error: "Could not fetch blog feed", articles: [] }), {
-        status: 502,
-        headers: { "Content-Type": "application/json" }
-      })
+      res.status(502).json({ error: "Could not fetch blog feed", articles: [] })
+      return
     }
 
     const xml = await feedRes.text()
@@ -79,17 +76,10 @@ export async function onRequest(context: { env: Env }): Promise<Response> {
       })
     )
 
-    return new Response(JSON.stringify({ articles }), {
-      headers: {
-        "Content-Type": "application/json",
-        "Cache-Control": "public, s-maxage=600, stale-while-revalidate=60"
-      }
-    })
+    res.setHeader("Cache-Control", "public, s-maxage=600, stale-while-revalidate=60")
+    res.status(200).json({ articles })
   } catch (err) {
     console.error("blog-posts error:", err)
-    return new Response(JSON.stringify({ error: "Internal server error", articles: [] }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" }
-    })
+    res.status(500).json({ error: "Internal server error", articles: [] })
   }
 }

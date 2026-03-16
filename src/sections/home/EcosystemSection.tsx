@@ -50,7 +50,7 @@ export default function EcosystemSection() {
           <a
             key={item.title}
             href={item.to}
-            className="group flex flex-col overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-soft transition-shadow duration-300 hover:shadow-lift no-underline"
+            className="group flex flex-col overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-soft transition-all duration-300 active:scale-[0.98] lg:hover:shadow-lift no-underline"
           >
             <div className="flex items-center justify-center rounded-2xl bg-sand-50 mx-5 mt-5 px-6 py-8">
               <img
