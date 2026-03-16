@@ -125,14 +125,31 @@ export default function BlogIndexPage() {
   const [status, setStatus] = React.useState<"loading" | "success" | "error">("loading")
 
   React.useEffect(() => {
-    fetch("/api/blog-posts")
-      .then(r => r.json())
-      .then(data => {
+    const fetchBlogPosts = async () => {
+      try {
+        // In development, Gatsby serves API functions during dev server
+        // In production build, we need to handle the fact that API isn't available during build
+        const response = await fetch("/api/blog-posts")
+        
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`)
+        }
+        
+        const data = await response.json()
         const posts: Article[] = data?.articles ?? []
         setArticles(posts)
         setStatus(posts.length > 0 ? "success" : "error")
-      })
-      .catch(() => setStatus("error"))
+      } catch (error) {
+        // During build time or if API fails, show error state
+        console.warn("Failed to fetch blog posts:", error)
+        setStatus("error")
+      }
+    }
+
+    // Only fetch on client-side, not during SSR/build
+    if (typeof window !== 'undefined') {
+      fetchBlogPosts()
+    }
   }, [])
 
   const [featured, ...rest] = articles
