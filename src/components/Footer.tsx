@@ -39,7 +39,7 @@ export default function Footer() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-2xl border border-ink-950/[0.08] bg-sand-50 px-3 py-1.5 font-ui text-xs font-semibold text-ink-950/60 no-underline transition hover:bg-sand-100 hover:text-ink-950"
+                    className="rounded-2xl border border-ink-950/[0.08] bg-sand-50 px-3 py-1.5 font-ui text-xs font-semibold text-ink-950/60 no-underline transition-all active:bg-sand-100 active:text-ink-950 lg:hover:bg-sand-100 lg:hover:text-ink-950"
                   >
                     {s.label}
                   </a>
@@ -56,14 +56,14 @@ export default function Footer() {
                   <Link
                     key={item.to}
                     to={item.to}
-                    className="font-ui text-sm font-semibold text-ink-950/65 no-underline transition hover:text-ink-950"
+                    className="py-1 font-ui text-sm font-semibold text-ink-950/65 no-underline transition-all active:text-ink-950 lg:hover:text-ink-950"
                   >
                     {item.label}
                   </Link>
                 ))}
                 <Link
                   to="/privacy"
-                  className="font-ui text-sm font-semibold text-ink-950/65 no-underline transition hover:text-ink-950"
+                  className="py-1 font-ui text-sm font-semibold text-ink-950/65 no-underline transition-all active:text-ink-950 lg:hover:text-ink-950"
                 >
                   Privacy Policy
                 </Link>
@@ -81,7 +81,7 @@ export default function Footer() {
                     href={w.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-ui text-sm font-semibold text-ink-950/65 no-underline transition hover:text-ink-950"
+                    className="py-1 font-ui text-sm font-semibold text-ink-950/65 no-underline transition-all active:text-ink-950 lg:hover:text-ink-950"
                   >
                     {w.label}
                   </a>
@@ -101,13 +101,13 @@ export default function Footer() {
                 </p>
                 <a
                   href="mailto: namaste@trita.in"
-                  className="font-ui text-sm font-semibold text-ink-950/65 no-underline transition hover:text-ink-950"
+                  className="py-1 font-ui text-sm font-semibold text-ink-950/65 no-underline transition-all active:text-ink-950 lg:hover:text-ink-950"
                 >
                    namaste@trita.in
                 </a>
                 <a
-                  href="tel:+910000000000"
-                  className="font-ui text-sm font-semibold text-ink-950/65 no-underline transition hover:text-ink-950"
+                  href="tel:+919342184698"
+                  className="py-1 font-ui text-sm font-semibold text-ink-950/65 no-underline transition-all active:text-ink-950 lg:hover:text-ink-950"
                 >
                   +91 93421 84698
                 </a>

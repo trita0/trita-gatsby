@@ -183,7 +183,7 @@ export default function TestimonialsSection({
                   href={r.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex flex-1 items-center justify-center gap-2 px-8 py-5 font-ui text-sm font-semibold text-ink-950/60 no-underline transition hover:bg-sand-50 hover:text-ink-950
+                  className={`flex flex-1 items-center justify-center gap-2 px-8 py-5 font-ui text-sm font-semibold text-ink-950/60 no-underline transition-all duration-200 active:bg-sand-50 active:text-ink-950 lg:hover:bg-sand-50 lg:hover:text-ink-950
                     ${i !== arr.length - 1 ? "border-r border-ink-950/[0.08]" : ""}`}
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-marigold-500" />

@@ -15,8 +15,8 @@ const links = [
 const NotFoundPage = () => (
   <SiteLayout>
     <div className="relative overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white px-8 py-20 text-center shadow-soft sm:px-16">
-      <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-marigold-500/20 blur-3xl" />
-      <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-indigo-600/15 blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-marigold-500/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-indigo-600/15 blur-3xl" />
 
       <div className="relative space-y-6">
         {/* Big 404 */}

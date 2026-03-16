@@ -46,7 +46,7 @@ function classesForVariant(variant: ButtonVariant) {
 export default function Button(props: ButtonProps) {
   const { variant = "primary", className, children, ...rest } = props as ButtonProps
   const base =
-    "inline-flex items-center justify-center rounded-2xl px-5 py-2.5 font-ui text-sm font-semibold no-underline shadow-soft transition-all duration-200 will-change-transform hover:-translate-y-0.5 hover:shadow-lift hover:no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-marigold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50"
+    "inline-flex items-center justify-center rounded-2xl px-5 py-2.5 font-ui text-sm font-semibold no-underline shadow-soft transition-all duration-200 active:scale-[0.98] active:opacity-90 hover:no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-marigold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50 lg:hover:-translate-y-0.5 lg:hover:shadow-lift"
   const cls = `${base} ${classesForVariant(variant)} ${className ?? ""}`
 
   if ("to" in props && typeof props.to === "string") {

@@ -214,7 +214,7 @@ export default function CommunityPage() {
                 href={c.href}
                 target={c.href.startsWith("http") ? "_blank" : undefined}
                 rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className={`group flex h-full flex-col gap-2 p-7 transition hover:bg-sand-50 no-underline
+                className={`group flex h-full flex-col gap-2 p-7 transition-all duration-200 active:bg-sand-100 lg:hover:bg-sand-50 no-underline
                   ${i % 3 !== 2 ? "lg:border-r border-ink-950/[0.08]" : ""}
                   ${i % 2 === 0 ? "sm:border-r border-ink-950/[0.08] lg:border-r-0" : ""}
                   ${i < 3 ? "lg:border-b border-ink-950/[0.08]" : ""}
@@ -329,7 +329,7 @@ export default function CommunityPage() {
                   href={r.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex flex-1 items-center justify-center gap-2 px-8 py-5 font-ui text-sm font-semibold text-ink-950/60 no-underline transition hover:bg-sand-50 hover:text-ink-950
+                  className={`flex flex-1 items-center justify-center gap-2 px-8 py-5 font-ui text-sm font-semibold text-ink-950/60 no-underline transition-all duration-200 active:bg-sand-50 active:text-ink-950 lg:hover:bg-sand-50 lg:hover:text-ink-950
                     ${i !== arr.length - 1 ? "border-r border-ink-950/[0.08]" : ""}`}
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-marigold-500" />
@@ -345,8 +345,8 @@ export default function CommunityPage() {
       <Reveal>
         <section className="mt-16">
           <div className="relative overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white p-8 text-center shadow-soft sm:p-12">
-            <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-marigold-500/20 blur-3xl" />
-            <div className="absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-indigo-600/15 blur-3xl" />
+            <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-marigold-500/20 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-indigo-600/15 blur-3xl" />
             <div className="relative space-y-4">
               <h2 className="font-display text-3xl font-bold text-ink-950 sm:text-4xl">
                 Want to bring games to your community?

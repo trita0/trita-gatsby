@@ -214,7 +214,7 @@ export default function MediaPage() {
                 href={award.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-soft transition-shadow duration-300 hover:shadow-md no-underline md:flex-row"
+                className="group flex flex-col overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-soft transition-all duration-300 active:scale-[0.99] lg:hover:shadow-md no-underline md:flex-row"
               >
                 {award.image && (
                   <div className="relative h-52 flex-shrink-0 overflow-hidden bg-sand-50 md:h-auto md:w-72">
@@ -264,7 +264,7 @@ export default function MediaPage() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-soft transition-shadow duration-300 hover:shadow-md no-underline"
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-soft transition-all duration-300 active:scale-[0.98] lg:hover:shadow-md no-underline"
               >
                 {item.image && (
                   <div className="relative h-40 overflow-hidden bg-sand-50">
@@ -363,8 +363,8 @@ export default function MediaPage() {
       <Reveal>
         <section className="mt-16">
           <div className="relative overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white p-8 shadow-soft text-center sm:p-12">
-            <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-marigold-500/20 blur-3xl" />
-            <div className="absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-indigo-600/15 blur-3xl" />
+            <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-marigold-500/20 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-indigo-600/15 blur-3xl" />
             <div className="relative space-y-4">
               <h2 className="font-display text-3xl font-bold text-ink-950 sm:text-4xl">
                 Want to feature us?
