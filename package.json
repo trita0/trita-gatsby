@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/helpers": "^7.28.6",
     "dotenv": "^16.4.5",
     "fast-xml-parser": "^5.5.5",
     "gatsby": "^5.14.6",
